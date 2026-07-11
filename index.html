@@ -7,7 +7,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Great+Vibes&amp;display=swap');
+        
+        @font-face {
+            font-family: "Inter";
+            src: url("./fonts/Inter-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Inter";
+            src: url("./fonts/Inter-SemiBold.woff2") format("woff2");
+            font-weight: 600;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "cinzel";
+            src: url("./fonts/cinzel-v26-latin-regular.woff2") format("woff2");
+            font-weight: 600;
+            font-display: swap;
+        }
 
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -42,8 +62,13 @@
 
         .modern-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.5);
             border-color: #D4AF37;
+            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.5);
+        }
+
+        .modern-card:hover .elegant-button {
+            background: linear-gradient(135deg, #F6E27A, #D4AF37, #9F7928);
+            color: #050505;
         }
 
         .sparkle-canvas {
@@ -51,13 +76,17 @@
         }
 
         .elegant-button {
+            background: transparent;
+            color: #D4AF37;
+            border: 1px solid #D4AF37;
+            border-radius: 1rem; /* rounded-2xl */
             font-weight: 500;
             letter-spacing: 0.6px;
-            transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         .elegant-button:hover {
-            background-color: #D4AF37;
+            background: linear-gradient(135deg, #F6E27A, #D4AF37, #9F7928);
             color: #050505;
             transform: translateY(-1px);
         }
@@ -106,19 +135,27 @@
         <div class="max-w-[1080px] w-full">
             
             <!-- Brand + Tagline -->
-            <div class="text-center mb-6">
+             <!-- Brand Logo -->
+            <div class="flex justify-center mb-8">
+                <img
+                    src="./images/jewels-of-phoenix-site-hero.png"
+                    alt="Jewels Of Phoenix"
+                    class="w-full max-w-[320px] md:max-w-[420px] h-auto"
+                >
+            </div>
+            <!-- <div class="text-center mb-6">
                 <h1 class="brand-name text-[68px] md:text-[82px] leading-none gold">
                     Jewels Of Phoenix
                 </h1>
                 <p class="tagline mt-0.5 text-[32px] md:text-[38px] text-[#C5A76B]">
                     for every you
                 </p>
-            </div>
+            </div> -->
 
             <!-- New text block -->
             <div class="text-center mb-9">
-                <p class="text-[#D4AF37]/90 text-sm tracking-[1px] leading-tight">
-                    website coming soon.<br>
+                <p class="font-['cinzel'] text-[#D4AF37]/90 text-xl tracking-[1px] leading-tight">
+                    website coming soon...<br>
                     Find us below till then
                 </p>
             </div>
@@ -141,7 +178,7 @@
 
                     <a href="https://www.instagram.com/jewels_of_phoenix?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                        target="_blank"
-                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 bg-white text-[#111] text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
+                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
                         FOLLOW ON INSTAGRAM
                     </a>
 
@@ -168,7 +205,7 @@
 
                     <a href="https://youtube.com/@jewelsofphoenix?si=b3B8AD6RrPlfpYhD" 
                        target="_blank"
-                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 bg-white text-[#111] text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
+                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
                         SUBSCRIBE ON YOUTUBE
                     </a>
 
@@ -195,7 +232,7 @@
 
                     <a href="https://wa.me/7708834596?text=Hello, I'd like to know the price of an item." 
                        target="_blank"
-                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 bg-white text-[#111] text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
+                       class="elegant-button inline-flex w-full items-center justify-center px-5 py-3 text-xs font-semibold rounded-2xl tracking-wider active:scale-[0.985]">
                         CHAT ON WHATSAPP
                     </a>
 
